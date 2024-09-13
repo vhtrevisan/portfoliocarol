@@ -1,0 +1,158 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=gambetta@400,500,700&display=swap');
+
+
+/* Cores */
+:root {
+  --primary-color: #E7D2CC;
+  --secondary-color: #B9B7BD;
+  --accent-color: #868B8E;
+  --background-color: #EEEDE7;
+  --text-color: #464749;
+}
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Seção Sobre Mim */
+.sobre-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.bio {
+  max-width: 600px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid var(--accent-color);
+}
+
+form button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--secondary-color);
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2em;
+}
+
+h1, h2, h3 {
+  font-family: 'Gambetta', serif;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text-color);
+}

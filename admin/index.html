@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Admin Carol Albano Designer</title>
+  <link rel="stylesheet" href="../styles/admin-styles.css">
+  <!-- Firebase App (modular SDK) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDNA6UJx90-7w51CDI3-xXxNw7iz7YpmlY",
+      authDomain: "carol-albano-designer.firebaseapp.com",
+      projectId: "carol-albano-designer",
+      storageBucket: "carol-albano-designer.appspot.com",
+      messagingSenderId: "406919521645",
+      appId: "1:406919521645:web:182f7ff14f550c22266664"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Export Firebase modules for use in other scripts
+    window.firebase = { auth };
+  </script>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form id="login-form">
+      <input type="text" placeholder="E-mail" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <script src="../scripts/admin-scripts.js" type="module"></script>
+</body>
+</html>

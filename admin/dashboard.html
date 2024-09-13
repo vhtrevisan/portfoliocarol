@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Administração - Carol Albano Designer</title>
+  <link rel="stylesheet" href="../styles/admin-styles.css">
+  <!-- Firebase App (modular SDK) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDNA6UJx90-7w51CDI3-xXxNw7iz7YpmlY",
+      authDomain: "carol-albano-designer.firebaseapp.com",
+      projectId: "carol-albano-designer",
+      storageBucket: "carol-albano-designer.appspot.com",
+      messagingSenderId: "406919521645",
+      appId: "1:406919521645:web:182f7ff14f550c22266664"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // Export Firebase modules for use in other scripts
+    window.firebase = { auth, db };
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Painel de Administração</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Adicionar Novo Projeto</h2>
+      <form id="new-project-form">
+        <input type="text" placeholder="Título do Projeto" required>
+        <input type="file" accept="image/*" required>
+        <button type="submit">Adicionar Projeto</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Projetos Existentes</h2>
+      <ul id="project-list">
+        <!-- Os projetos existentes serão listados aqui -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="../scripts/admin-scripts.js" type="module"></script>
+</body>
+</html>
