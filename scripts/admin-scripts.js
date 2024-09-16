@@ -16,7 +16,7 @@ loginForm.addEventListener('submit', async (e) => {
     // Firebase Authentication - Login com e-mail e senha
     const userCredential = await signInWithEmailAndPassword(window.firebase.auth, email, password);
     // Login bem-sucedido
-    window.location.href = "dashboard.html"; // Redirecionar para o painel
+    window.location.href = "admin/dashboard.html"; // Redirecionar para o painel
   } catch (error) {
     // Tratar erro
     alert("Erro de autenticação: " + error.message);
